@@ -97,8 +97,8 @@ describe('Getters', () => {
   it('keeps getters reactive when hydrating', () => {
     const pinia = createPinia()
     setActivePinia(pinia)
-    pinia.state.value = { main: { name: 'Jack' } }
     const store = useStore()
+    pinia.state.value = { main: { name: 'Jack' } }
     expect(store.name).toBe('Jack')
     expect(store.upperCaseName).toBe('JACK')
     store.name = 'Ed'
